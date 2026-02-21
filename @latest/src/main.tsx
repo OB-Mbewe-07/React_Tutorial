@@ -1,11 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.tsx'
+import NavBar from './components/Nav.tsx';
+import SliderHero from './components/Hero.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <NavBar />
+    <SliderHero />
     <App />
   </StrictMode>,
 )
