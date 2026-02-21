@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import entertainmentSchedule from "./data/data";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App(){
+  const movies = entertainmentSchedule;
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="movie-list">
+      {movies.map((movie) => (
+        <div className="card" style={{ width: '17rem' }}>
+          <img src={movie.image} className="card-img-top" alt={`${movie.title} image`} />
+          <div className="card-body">
+            <h5 className="card-title">{movie.title}</h5>
+            <p className="card-text">{movie.description}</p>
+            <button className="btn btn-primary mt-auto">View Details</button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
-
-export default App
