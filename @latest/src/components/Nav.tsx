@@ -35,10 +35,10 @@ export default function NavBar({ onModeChange }: NavBarProps){
                             Sort
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#" onClick={() => onModeChange("price-asc")}>Price (Low to High)</a>
-                            <a className="dropdown-item" href="#" onClick={() => onModeChange("price-desc")}>Price (High to Low)</a>
+                            <a className="dropdown-item" onClick={() => onModeChange("price-asc")}>Price (Low to High)</a>
+                            <a className="dropdown-item"  onClick={() => onModeChange("price-desc")}>Price (High to Low)</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#" onClick={() => onModeChange("rating-asc")}>Rating (Low to High)</a>
+                            <a className="dropdown-item"  onClick={() => onModeChange("rating-asc")}>Rating (Low to High)</a>
                             <a className="dropdown-item" href="#" onClick={() => onModeChange("rating-desc")}>Rating (High to Low)</a>
                         </div>
                     </li>

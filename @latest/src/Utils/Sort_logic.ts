@@ -1,17 +1,18 @@
 import type { AnimeItem } from "../data/data";
 import type { Mode } from "../data/data";
 
-export function sortByNextMovie(items: AnimeItem[], isClosestorFurthest: boolean): AnimeItem[] {
-    enum Day{
-        Sunday = 0,
-        Monday = 1,
-        Tuesday = 2,
-        Wednesday = 3,
-        Thursday = 4,
-        Friday = 5,
-        Saturday = 6
-    }
+ enum Day{
+    Sunday = 0,
+    Monday = 1,
+    Tuesday = 2,
+    Wednesday = 3,
+    Thursday = 4,
+    Friday = 5,
+    Saturday = 6
+} 
 
+export function sortByNextMovie(items: AnimeItem[], isClosestorFurthest: boolean): AnimeItem[] {
+   
     const now = new Date();
 
     const getClosestDate = (showtimes: string[]): Date => {

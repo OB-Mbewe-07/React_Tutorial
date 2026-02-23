@@ -1,0 +1,138 @@
+/* OVERLAY */
+.cinema-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 20, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* MODAL */
+.cinema-modal {
+  width: 90%;
+  max-width: 1200px;
+  height: 650px;
+  background: rgba(20, 20, 35, 0.95);
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 80px rgba(0,0,0,0.9);
+  animation: scaleIn 0.35s ease forwards;
+}
+
+/* LEFT */
+.cinema-left {
+  width: 55%;
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+  color: white;
+  overflow-y: auto;
+}
+
+.cinema-poster {
+  width: 200px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.8);
+  transition: transform 0.3s ease;
+}
+
+.cinema-poster:hover {
+  transform: scale(1.05);
+}
+
+/* INFO */
+.cinema-info h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.cinema-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.genre-tags {
+  margin-bottom: 15px;
+}
+
+.genre-badge {
+  background: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.cinema-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.event-details p {
+  margin: 6px 0;
+}
+
+.notes {
+  color: #ffcc00;
+}
+
+/* BUTTON */
+.watch-btn {
+  margin-top: 15px;
+  background: linear-gradient(45deg, #ff0066, #ff6600);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.watch-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255,0,100,0.4);
+}
+
+/* RIGHT */
+.cinema-right {
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(0.8);
+}
+
+/* FADE OVERLAY */
+.cinema-right::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(20,20,35,0.1),
+    rgba(20,20,35,1)
+  );
+}
+
+/* CLOSE */
+.cinema-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

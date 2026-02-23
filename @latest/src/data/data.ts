@@ -120,7 +120,7 @@ const animeSchedule: AnimeItem[] = [
     genre: ["Thriller", "Supernatural"],
     description: "A student gains a notebook that can kill anyone.",
     venue: "Braamfontein Screening",
-    showtimes: ["Friday 19:00"],
+    showtimes: ["Sunday 19:00"],
     price: 75,
     image: "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_.jpg",
     stars: 5,
