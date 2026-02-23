@@ -18,7 +18,7 @@ export default function App({
       {movies.map((movie) => (
         <div
           className="card"
-          style={{ width: "17rem" }}
+          
           onClick={() => onSelectAnime(movie)}
         >
           <img

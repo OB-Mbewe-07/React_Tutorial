@@ -13,7 +13,7 @@
   width: 300px;
   overflow: hidden;
   color: #fff;
-
+  width: 17rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

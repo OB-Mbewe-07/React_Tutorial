@@ -11,6 +11,7 @@ import "./index.css";
 import "./styles/Cards.css";
 import "./styles/Hero.css";
 import "./styles/popup.css";
+import "./styles/mobile.css";
 
 const root = createRoot(document.getElementById("root")!);
 
