@@ -1,9 +1,10 @@
 import entertainmentSchedule from "./data/data";
-import { sortByNextMovie, sortByPrice, sortByRating } from "./Utils/Sort_logic";
+import sortItems from "./Utils/Sort_logic";
 import "./App.css";
+import type { Mode } from "./data/data";
 
-export default function App(){
-  const movies = sortByNextMovie(entertainmentSchedule, true);
+export default function App({ mode = "closest" }: { mode?: Mode }) {
+  const movies = sortItems(entertainmentSchedule, mode);
   return (
     <div className="movie-list">
       {movies.map((movie) => (

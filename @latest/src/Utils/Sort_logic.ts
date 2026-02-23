@@ -1,17 +1,17 @@
 import type { AnimeItem } from "../data/data";
-
-enum Day{
-    Sunday = 0,
-    Monday = 1,
-    Tuesday = 2,
-    Wednesday = 3,
-    Thursday = 4,
-    Friday = 5,
-    Saturday = 6
-}
-
+import type { Mode } from "../data/data";
 
 export function sortByNextMovie(items: AnimeItem[], isClosestorFurthest: boolean): AnimeItem[] {
+    enum Day{
+        Sunday = 0,
+        Monday = 1,
+        Tuesday = 2,
+        Wednesday = 3,
+        Thursday = 4,
+        Friday = 5,
+        Saturday = 6
+    }
+
     const now = new Date();
 
     const getClosestDate = (showtimes: string[]): Date => {
@@ -54,3 +54,28 @@ export function sortByRating(items: AnimeItem[], ascending: boolean = true): Ani
     return items.sort((a,b) => ascending ? a.stars - b.stars : b.stars - a.stars);
 }
 
+export function searchByTitle(items: AnimeItem[], query: string): AnimeItem[] {
+    const lowerQuery = query.toLowerCase();
+    return items.filter(item => item.title.toLowerCase().includes(lowerQuery));
+}
+
+export default function sortItems(items: AnimeItem[], mode: Mode, searchQuery?: string): AnimeItem[] {
+    switch(mode) {
+        case "closest":
+            return sortByNextMovie(items, true);
+        case "furthest":
+            return sortByNextMovie(items, false);
+        case "price-asc":
+            return sortByPrice(items, true);
+        case "price-desc":
+            return sortByPrice(items, false);
+        case "rating-asc":
+            return sortByRating(items, true);
+        case "rating-desc":
+            return sortByRating(items, false);
+        case "search":
+            return searchByTitle(items, searchQuery || "");
+        default:
+            return items;
+    };
+};

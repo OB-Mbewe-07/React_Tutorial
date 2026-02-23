@@ -1,5 +1,12 @@
+import type { Mode } from "../data/data";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-export default function NavBar(){
+interface NavBarProps {
+  onModeChange: (mode: Mode) => void;
+}
+
+export default function NavBar({ onModeChange }: NavBarProps){
     return(
         <div className="Nav_Container">
             <nav className="navbar navbar-expand-lg custom-navbar">
@@ -11,24 +18,29 @@ export default function NavBar(){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Home</a>
+                        <a className="nav-link" href="#" onClick={() => onModeChange("closest")}>Earliest Showtime</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link" href="#" onClick={() => onModeChange("furthest")}>Latest Showtime</a>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort
+                        <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Sort
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Another action</a>
+                            <a className="dropdown-item" href="#" onClick={() => onModeChange("price-asc")}>Price (Low to High)</a>
+                            <a className="dropdown-item" href="#" onClick={() => onModeChange("price-desc")}>Price (High to Low)</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Something else here</a>
+                            <a className="dropdown-item" href="#" onClick={() => onModeChange("rating-asc")}>Rating (Low to High)</a>
+                            <a className="dropdown-item" href="#" onClick={() => onModeChange("rating-desc")}>Rating (High to Low)</a>
                         </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link " href="#">Disabled</a>
                     </li>
                     </ul>
                     <form className="frm_search d-flex gap-2">

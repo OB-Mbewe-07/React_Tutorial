@@ -12,6 +12,15 @@ export interface AnimeItem {
   notes: string;
 }
 
+export type Mode =
+  | "closest"
+  | "furthest"
+  | "price-asc"
+  | "price-desc"
+  | "rating-asc"
+  | "rating-desc"
+  | "search";
+
 const animeSchedule: AnimeItem[] = [
   {
     title: "Attack on Titan",

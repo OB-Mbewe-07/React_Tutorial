@@ -357,6 +357,11 @@ li .nav-link:hover{
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
+.custom-navbar {
+  position: relative;
+  z-index: 1050; /* higher than hero */
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 0.5; }
   50% { transform: scale(1.2); opacity: 0.8; }
