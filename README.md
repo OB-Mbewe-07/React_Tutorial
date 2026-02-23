@@ -6,16 +6,9 @@ This project demonstrates component-based architecture, type-safe props, dynamic
 
 ---
 
-## 🚀 Live Demo
-
-👉 https://your-live-demo-link.com
-
----
-
 ### 🏠 Home Page
 
 <img width="3360" height="2100" alt="image" src="https://github.com/user-attachments/assets/8d5a6433-ac77-4136-ac5d-7f7dd03d782f" />
-
 
 
 ---
@@ -59,12 +52,21 @@ This project demonstrates component-based architecture, type-safe props, dynamic
 
 src/
 ├── components/
+
 │ ├── NavBar.tsx
+
 │ ├── AnimeCard.tsx
+
 │ ├── Modal.tsx
+
 │
+
 ├── data/
+
 │ └── data.ts
+
 │
+
 ├── App.tsx
+
 └── main.tsx
