@@ -50,23 +50,30 @@ This project demonstrates component-based architecture, type-safe props, dynamic
 
 ## 📂 Project Structure
 
+## 📁 Project Structure
+
+## 📁 Project Structure
+
+```bash
 src/
-├── components/
-
-│ ├── NavBar.tsx
-
-│ ├── AnimeCard.tsx
-
-│ ├── Modal.tsx
-
+├── components/          # Reusable UI components
+│   ├── Hero.tsx
+│   ├── Nav.tsx
+│   └── Popups.tsx
 │
-
-├── data/
-
-│ └── data.ts
-
+├── data/                # Static or mock data
+│   └── data.ts
 │
-
-├── App.tsx
-
-└── main.tsx
+├── styles/              # Component-specific styles
+│   ├── cards.css
+│   ├── hero.css
+│   └── popup.css
+│
+├── utils/               # Helper / utility functions
+│   └── Sort_logic.ts
+│
+├── App.css              # Global app styles
+├── App.tsx              # Root component
+├── index.css            # Global base styles
+└── main.tsx             # Application entry point
+```
