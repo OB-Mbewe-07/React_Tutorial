@@ -55,6 +55,8 @@ li .nav-link:hover{
   padding: 10px 40px;
 }
 
+
+
 .custom-navbar {
   background: #1E1E1E;
   border-radius: 15px;
@@ -144,4 +146,43 @@ li .nav-link:hover{
 
 .showtime:active {
   transform: scale(0.95);
+}
+
+.Nav_Container {
+  background: linear-gradient(to right, #0f0f0f, #141414);
+  padding: 0 24px;
+  
+}
+
+.custom-brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  margin-left: 1%;
+}
+
+.brand-highlight {
+  background: linear-gradient(90deg, #ff4757, #ff5722, #ff4757);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+.custom-brand {
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.custom-brand:hover {
+  transform: scale(1.05);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
